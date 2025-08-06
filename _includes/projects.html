@@ -1,25 +1,72 @@
-<section id="portfolio">
-  <h2 class="section-title">PORTFOLIO</h2>
-  <p class="section-subtitle">A glimpse of the projects I've been working on</p>
+---
+layout: default
+title: Projects
+---
 
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-filter="all">Show all</button>
-    <button class="filter-btn" data-filter="datamining">Data mining</button>
-    <button class="filter-btn" data-filter="dataviz">Dataviz</button>
-    <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-    <button class="filter-btn" data-filter="shiny">Shiny</button>
-    <button class="filter-btn" data-filter="d3js">D3.js</button>
-  </div>
+<section class="project-page">
+  <div class="project-container">
+    <h1>Portfolio</h1>
+    <p>A glimpse of the projects I've been working on</p>
 
-  <div class="portfolio-grid">
-    <div class="portfolio-item datamining dashboard">
-      <img src="assets/img/project1.png" alt="Project 1">
-      <p class="caption">Types of Data Professionals</p>
+    <!-- Filter Buttons -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">Show all</button>
+      <button class="filter-btn" data-filter="dataviz">Dataviz</button>
+      <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+      <button class="filter-btn" data-filter="data-mining">Data Mining</button>
+      <button class="filter-btn" data-filter="d3js">D3.js</button>
     </div>
-    <div class="portfolio-item dataviz">
-      <img src="assets/img/project2.png" alt="Project 2">
-      <p class="caption">Line Regression Breakdown</p>
+
+    <!-- Portfolio Grid -->
+    <div class="project-gallery">
+      <div class="project-item dataviz">
+        <img src="/assets/img/types-of-data-pros.png" alt="Types of Data Professionals">
+        <div class="caption">Types of Data Professionals</div>
+      </div>
+
+      <div class="project-item dashboard">
+        <img src="/assets/img/line-correlation.png" alt="Linear Regression Analysis">
+        <div class="caption">Linear Regression Analysis</div>
+      </div>
+
+      <div class="project-item data-mining dashboard">
+        <img src="/assets/img/sharpen-design.png" alt="Sharpen Your Design Eye">
+        <div class="caption">Sharpen Your Design Eye</div>
+      </div>
+
+      <div class="project-item d3js dataviz">
+        <img src="/assets/img/bubble-plot.png" alt="D3 Bubble Plot">
+        <div class="caption">D3 Bubble Plot: Skills Clustering</div>
+      </div>
+
+      <!-- Add more project items here -->
     </div>
-    <!-- Repeat for each project -->
   </div>
 </section>
+
+<!-- JavaScript Filter Logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".project-item");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        // Toggle active class
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // Filter projects
+        items.forEach(item => {
+          if (filter === "all" || item.classList.contains(filter)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
