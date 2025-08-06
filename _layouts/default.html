@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <main>
+      <section id="about">
+        {% include about.html %}
+      </section>
+
+      <section id="skills">
+        {% include skills.html %}
+      </section>
+
+      <section id="certs">
+        {% include certs.html %}
+      </section>
+
+      <section id="projects">
+        {% include projects.html %}
+      </section> 
+
+      <section id="deep_dives">
+        {% include deep_dives.html %}
+      </section> 
+      
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <!-- Add particles.js scripts here -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!--script src="{{ '/assets/js/particles-config.js' | relative_url }}"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5
+      },
+      "size": {
+        "value": 3
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+#about {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 960px;
+
+  @media only screen and (min-width: $cut) {
+    width: 80%;
+  }
+}
+
+.user {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // REMOVE or reduce the font-size here
+  // font-size: 60px; ← remove this line completely
+
+  @media only screen and (min-width: $cut) {
+    flex-wrap: nowrap;
+  }
+}
+
+.tech {
+  margin: 10px;
+  font-size: 16px;
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  li {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}
+
+.user-details {
+  text-align: center;
+  margin: 5px auto;
+}

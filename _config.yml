@@ -1,0 +1,28 @@
+# Site settings
+title: Amelia Meyer
+description: My data science portfolio
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "https://ameliameyer.github.io/home" # the base hostname & protocol for your site 
+
+# User settings
+username: Amelia Meyer
+user_description: Data analyst with a passion for building intelligent solutions and exploring creative insights.
+user_title: Data Science & Machine Learning
+email: amelianmeyer@gmail.com
+twitter_username: ameliameyer
+github_username: ameliameyer
+gplus_username: ameliameyer
+
+# Google Analytics
+google-analytics:
+  id: ""
+
+# Files to exclude from the build
+exclude:
+  - package.json
+  - src
+  - node_modules
+
+# files to include in the build
+include:
+  - projects
