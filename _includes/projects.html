@@ -1,67 +1,22 @@
-<section class="project-page">
-  <div class="project-container">
-    <h1>Portfolio - TEST1</h1>
-    <p>A glimpse of the projects I've been working on</p>
-
-    <!-- Filter Buttons -->
-    <div class="project-filters">
-      <button class="filter-btn active" data-filter="all">Show all</button>
-      <button class="filter-btn" data-filter="dataviz">Dataviz</button>
-      <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-      <button class="filter-btn" data-filter="data-mining">Data Mining</button>
-      <button class="filter-btn" data-filter="d3js">D3.js</button>
+<div class="centered-section">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-item">
+      <a href="/projects/flood_claims.html">
+        <img src="/assets/img/proj_images/flood_claims_thumb.png" alt="FEMA Flood Claims Project">
+        <p>FEMA Flood Claims</p>
+      </a>
     </div>
 
-    <!-- Portfolio Grid -->
-    <div class="project-gallery">
-      <div class="project-item dataviz">
-        <img src="/assets/img/types-of-data-pros.png" alt="Types of Data Professionals">
-        <div class="caption">Types of Data Professionals</div>
-      </div>
-
-      <div class="project-item dashboard">
-        <img src="/assets/img/line-correlation.png" alt="Linear Regression Analysis">
-        <div class="caption">Linear Regression Analysis</div>
-      </div>
-
-      <div class="project-item data-mining dashboard">
-        <img src="/assets/img/sharpen-design.png" alt="Sharpen Your Design Eye">
-        <div class="caption">Sharpen Your Design Eye</div>
-      </div>
-
-      <div class="project-item d3js dataviz">
-        <img src="/assets/img/bubble-plot.png" alt="D3 Bubble Plot">
-        <div class="caption">D3 Bubble Plot: Skills Clustering</div>
-      </div>
-
-      <!-- Add more project items here -->
+    <!-- Project 2 -->
+    <div class="project-item">
+      <a href="/projects/us_golf_course_access.html">
+        <img src="/assets/img/proj_images/golf_course_thumb.png" alt="Golf Course Access Project">
+        <p>Golf Course Access</p>
+      </a>
     </div>
+
+    <!-- Add more projects here -->
   </div>
-</section>
-
-<!-- JavaScript Filter Logic -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".filter-btn");
-    const items = document.querySelectorAll(".project-item");
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const filter = btn.getAttribute("data-filter");
-
-        // Toggle active class
-        buttons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        // Filter projects
-        items.forEach(item => {
-          if (filter === "all" || item.classList.contains(filter)) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        });
-      });
-    });
-  });
-</script>
+</div>
