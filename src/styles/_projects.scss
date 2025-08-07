@@ -7,9 +7,10 @@
   font-weight: 300;
 
   .project-container {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 1rem;
+    text-align: center;
   }
 
   h1, h2, h3 {
@@ -40,85 +41,68 @@
     }
   }
 
-  .project-buttons {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 3rem;
-    gap: 1rem;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid #1a1a1a;
-    border-radius: 4px;
-    background: transparent;
-    color: #1a1a1a;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.25s ease, color 0.25s ease;
-
-    &:hover {
-      background-color: #1a1a1a;
-      color: #fff;
-    }
-  }
-
-  // New: Portfolio Filters
+  // Filter Buttons Section
   .project-filters {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
     margin-bottom: 2rem;
 
     .filter-btn {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.25rem;
       font-size: 0.875rem;
-      background: transparent;
-      border: 1px solid #1a1a1a;
-      border-radius: 4px;
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 999px; // pill shape
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
 
       &.active,
       &:hover {
-        background-color: #1a1a1a;
-        color: #fff;
+        background-color: #574fd6;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
     }
   }
 
-  // New: Portfolio Gallery Grid
+  // Portfolio Project Grid
   .project-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+  }
 
-    .project-item {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      text-align: center;
+  // Individual Project Card
+  .project-item {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid #eee;
 
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      }
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    }
 
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
 
-      .caption {
-        padding: 1rem;
-        font-size: 1rem;
-        color: #1a1a1a;
-      }
+    .caption {
+      padding: 1rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1a1a1a;
     }
   }
 }
