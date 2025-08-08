@@ -15,8 +15,8 @@
 
 .filter-btn {
   border: 2px solid #3e76a7;
-  background-color: transparent;
-  color: #3e76a7;
+  background-color: #3e76a7;         // Solid blue background
+  color: #ffffff;                    // White text
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
@@ -27,11 +27,12 @@
 
   &:hover,
   &.active {
-    background-color: #3e76a7;
-    color: #fff;
-    box-shadow: 0 0 8px rgba(62, 118, 167, 0.6);
+    background-color: #2f5c84;       // Slightly darker blue
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(62, 118, 167, 0.6); // glow with brand blue
   }
 }
+
 
 .projects-grid {
   display: grid;
