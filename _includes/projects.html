@@ -1,8 +1,39 @@
 <section id="projects">
   <div class="user-details">
     <h2>Projects</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="data">Data</button>
+      <button class="filter-btn" data-filter="viz">Visualizations</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+    </div>
+
+    <!-- Projects Grid -->
     <div class="projects-grid">
-      <!-- your project cards go here -->
+      <div class="project-card" data-category="data">
+        <img src="/assets/img/flood_claims.png" alt="Flood Claims Analysis">
+        <div class="overlay">
+          <span class="project-title">Flood Claims Dashboard</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="viz">
+        <img src="/assets/img/golf_access.png" alt="Golf Access Visualization">
+        <div class="overlay">
+          <span class="project-title">Golf Access Dashboard</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ml">
+        <img src="/assets/img/churn_predictor.png" alt="Churn Predictor">
+        <div class="overlay">
+          <span class="project-title">Customer Churn Predictor</span>
+        </div>
+      </div>
+
+      <!-- Add more project cards as needed -->
     </div>
   </div>
 </section>
